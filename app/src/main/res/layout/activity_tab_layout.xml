@@ -13,7 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="PRUEBA">
 
+    </TextView>
 
     <androidx.viewpager.widget.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"

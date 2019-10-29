@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import edu.val.fragmentsapp.fragment.ScreenFragment1;
 import edu.val.fragmentsapp.fragment.ScreenFragment2;
+import edu.val.fragmentsapp.fragment.ScreenFragment3;
 
 public class PagerAdapterVP extends FragmentStatePagerAdapter {
 
@@ -25,9 +26,9 @@ public class PagerAdapterVP extends FragmentStatePagerAdapter {
 
         switch (position)
         {
-            case 0: fragment = new ScreenFragment1();
-                break;
-            default: fragment = new ScreenFragment2();
+            case 0: fragment = new ScreenFragment1(); break;
+            case 1: fragment = new ScreenFragment2(); break;
+            default: fragment = new ScreenFragment3();
         }
 
         return  fragment;
@@ -36,7 +37,7 @@ public class PagerAdapterVP extends FragmentStatePagerAdapter {
     //Este método se usa sólo para saber cuántas pantallas tengo y si el adpter ha llegado al final
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
 }

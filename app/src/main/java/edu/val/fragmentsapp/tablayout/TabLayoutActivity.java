@@ -26,7 +26,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 
 
     //Este será el título visible por cada fragment
-    private static String[] titulo_tab = {"OPTION 1" , "OPTION 2"};
+    private static String[] titulo_tab = {"OPTION 1" , "OPTION 2", "OPTION 3"};
 
 
     public static String getTitulo (int posicion)
@@ -49,6 +49,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 //Obtengo referencia al tablayout
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablay);
         //creo dinámicamente sus elementos. Sólo 2
+        tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
 

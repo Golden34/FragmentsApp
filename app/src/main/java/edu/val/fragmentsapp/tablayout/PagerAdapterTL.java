@@ -1,13 +1,13 @@
 package edu.val.fragmentsapp.tablayout;
 
 
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import edu.val.fragmentsapp.fragment.ScreenFragment1;
 import edu.val.fragmentsapp.fragment.ScreenFragment2;
+import edu.val.fragmentsapp.fragment.ScreenFragment3;
 
 
 public class PagerAdapterTL extends FragmentStatePagerAdapter {
@@ -27,7 +27,8 @@ public class PagerAdapterTL extends FragmentStatePagerAdapter {
         switch (posicion)
         {
             case 0: fragment = new ScreenFragment1(); break;
-            default: fragment = new ScreenFragment2();
+            case 1: fragment = new ScreenFragment2(); break;
+            default: fragment = new ScreenFragment3();
         }
 
         return  fragment;
@@ -35,7 +36,7 @@ public class PagerAdapterTL extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     //sobrrescribo este método para que se pinte el tab como parte

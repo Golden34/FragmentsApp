@@ -33,16 +33,18 @@ public class ViewPagerActivity extends AppCompatActivity {
         //Y le asigno su adpter
         pagerAdapter = new PagerAdapterVP(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(1);  // por indices 0,1,...
     }
 
 
     //Sobreescribiendo este método, consigo personalizar el comportamiento del botón "hacia atrás"
     //en esta actividad.
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() { //del botón
         if (viewPager.getCurrentItem() == 0) {
             // Si estoy en la pantalla inicial, hago que se cierre la app (comportamiento por defecto logrado invocando al padre)
             super.onBackPressed();
+            //viewPager.setCurrentItem(0);
         } else {
             // Si no, paso a una pantalla anterior
             viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
